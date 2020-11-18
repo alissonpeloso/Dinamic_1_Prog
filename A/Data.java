@@ -6,11 +6,11 @@ public class Data {
     protected int minuto;
 
     Data(int hora, int minuto, int dia, int mes, int ano){
-        this.hora = hora;
-        this.minuto = minuto;
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
+        setHora(hora);
+        setMinuto(minuto);
+        setDia(dia);
+        setMes(mes);
+        setAno(ano);
     }
 
     public int getDia(){
@@ -70,6 +70,14 @@ public class Data {
             this.minuto = minuto;
         } else {
             System.out.println("Valor informado inválido!");
+        }
+    }
+
+    public void isAmIsPm(){
+        if(this.hora > 0 && this.hora < 12){
+            System.out.println("É AM!");
+        }else{
+            System.out.println("É PM!");
         }
     }
 }
