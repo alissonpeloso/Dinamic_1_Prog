@@ -7,7 +7,7 @@ public class VarInt{
     public float media = 0.0;
     int tamVetor = 0;
     Scanner ler = new Scanner(System.in);
-    public guardaInteiros(){
+    public void guardaInteiros(){
         System.out.printf("Digit o numero de elementos do vetor");
         tamVetor = ler.nextInt();
         for (int i =0; i<tamVetor; i++){
