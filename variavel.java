@@ -7,8 +7,8 @@ public class VarInt{
     public float media = 0.0;
     int tamVetor = 0;
     Scanner ler = new Scanner(System.in);
-    public void guardaInteiros(){
-        System.out.printf("Digit o numero de elementos do vetor");
+    public guardaInteiros(){
+        System.out.printf("Digite o numero de elementos do vetor");
         tamVetor = ler.nextInt();
         for (int i =0; i<tamVetor; i++){
             System.out.printf("Informe o número");
@@ -38,5 +38,13 @@ public class VarInt{
         }
         media = media/tamVetor;
         return media;
+    }
+    public qtdPrimo(){
+        int primoAux
+        for (int j = 2; j < numero; j++) {
+            if (numero % j == 0)
+                primoAux +=1; 
+        }
+        
     }
 } 
