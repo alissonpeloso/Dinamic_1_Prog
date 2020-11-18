@@ -4,13 +4,15 @@ public class Data {
     protected int ano;
     protected int hora;
     protected int minuto;
+    protected int segundo;
 
-    Data(int hora, int minuto, int dia, int mes, int ano){
+    Data(int hora, int minuto, int segundo, int dia, int mes, int ano){
         setHora(hora);
         setMinuto(minuto);
         setDia(dia);
         setMes(mes);
         setAno(ano);
+        setSegundos(segundo);
     }
 
     public int getDia(){
@@ -73,11 +75,44 @@ public class Data {
         }
     }
 
-    public void isAmIsPm(){
-        if(this.hora > 0 && this.hora < 12){
-            System.out.println("É AM!");
-        }else{
-            System.out.println("É PM!");
+    public int getSegundos() {
+        return this.segundo;
+    }
+
+    public void setSegundos(int segundo){
+        if (segundo > 0 && segundo < 60){
+            this.segundo = segundo;
+        } else {
+            System.out.println("Valor informado inválido!");
         }
+    }
+
+    public int isAmIsPm(){
+        if(this.hora > 0 && this.hora < 12){
+            // System.out.println("É AM!");
+            return 0;
+        }else{
+            // System.out.println("É PM!");
+            return 1;
+        }
+
+    }
+
+    public void printData(){
+        int a = this.isAmIsPm();
+        if (a == 1){
+            System.out.print("Data: %d/%d/%d, %d:%d:%d PM");
+        }else{
+            System.out.print("Data: %d/%d/%d, %d:%d:%d AM");
+        } 
+    }
+
+    public int diferencaTempoEmSegundos(Data data1, Data data2){
+        int dif = 0;
+        
+        
+        
+        
+        return dif;
     }
 }
