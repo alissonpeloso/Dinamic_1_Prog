@@ -8,7 +8,7 @@ public class VarInt{
     int tamVetor = 0;
     Scanner ler = new Scanner(System.in);
     public guardaInteiros(){
-        System.out.printf("Digit o numero de elementos do vetor");
+        System.out.printf("Digite o numero de elementos do vetor");
         tamVetor = ler.nextInt();
         for (int i =0; i<tamVetor; i++){
             System.out.printf("Informe o número");
