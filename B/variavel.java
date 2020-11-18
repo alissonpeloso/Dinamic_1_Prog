@@ -10,7 +10,7 @@ public class VarInt{
     public guardaInteiros(){
         System.out.printf("Digit o numero de elementos do vetor");
         tamVetor = ler.nextInt();
-        for (int i =0; i<tamVetor;i++){
+        for (int i =0; i<tamVetor; i++){
             System.out.printf("Informe o número");
             values[i] = ler.nextInt();
         }
