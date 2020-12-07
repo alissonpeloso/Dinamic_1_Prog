@@ -1,17 +1,16 @@
 public class Data {
     protected int dia;
-    protected int mes;
-    protected int ano;
     protected int hora;
     protected int minuto;
     protected int segundo;
 
-    Data(int hora, int minuto, int segundo, int dia, int mes, int ano){
+    Data(){
+    }
+
+    Data(int hora, int minuto, int segundo, int dia){
         setHora(hora);
         setMinuto(minuto);
         setDia(dia);
-        setMes(mes);
-        setAno(ano);
         setSegundos(segundo);
     }
 
@@ -22,30 +21,6 @@ public class Data {
     public void setDia(int dia) {
         if(dia > 0 && dia < 32){
             this.dia = dia;
-        } else {
-            System.out.println("Valor informado inválido!");
-        }
-    }
-
-    public int getMes(){
-        return this.mes;
-    }
-
-    public void setMes(int mes) {
-        if (mes > 0 && mes <= 12){
-            this.mes = mes;
-        } else {
-            System.out.println("Valor informado inválido!");
-        }
-    }
-
-    public int getAno(){
-        return this.ano;
-    }
-
-    public void setAno(int ano) {
-        if (ano > 0){
-            this.ano = ano;
         } else {
             System.out.println("Valor informado inválido!");
         }
@@ -107,12 +82,15 @@ public class Data {
         } 
     }
 
-    public int diferencaTempoEmSegundos(Data data1, Data data2){
-        int dif = 0;
+    public void diferencaTempo(Data data2){
+        Data data3 = new Data();
+        data3.setSegundos(this.segundo - data2.segundo);
+        data3.setMinuto(this.minuto - data2.minuto);
+        data3.setHora(this.hora - data2.hora);
+        data3.setDia(this.dia - data2.dia);
         
+
+
         
-        
-        
-        return dif;
     }
 }
